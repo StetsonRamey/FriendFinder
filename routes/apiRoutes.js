@@ -1,21 +1,26 @@
 // ===============================================================================
-// DEPENDENCIES
-// We need to include the path package to get the correct file path for our html
+// LOAD DATA
+// We are linking our routes to a series of "data" sources.
+// These data sources hold arrays of information on table-data, waitinglist, etc.
 // ===============================================================================
-var path = require("path");
 
+var friendData = require('../data/friends');
 
 // ===============================================================================
 // ROUTING
 // ===============================================================================
 
-module.exports = function (app) {
-    // HTML GET Requests
+module.exports = function(app) {
+  // HTML GET Requests
   // Below code handles when users "visit" a page.
   // In each of the below cases the user is shown an HTML page of content
   // ---------------------------------------------------------------------------
+  app.get('/api/friends', function(req, res) {
+    res.json(friendData);
+  });
+  // HTML POST Requests
+  // Below code handles form data and posts it
+  // ---------------------------------------------------------------------------
 
-  app.get("/survey", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/survey.html"));
-  })
-}
+  app.post('/api/friends', function(req, res) {});
+};
