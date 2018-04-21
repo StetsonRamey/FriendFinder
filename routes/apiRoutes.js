@@ -22,5 +22,8 @@ module.exports = function(app) {
   // Below code handles form data and posts it
   // ---------------------------------------------------------------------------
 
-  app.post('/api/friends', function(req, res) {});
+  app.post('/api/friends', function(req, res) {
+    friendData.push(req.body);
+    res.json(true);
+  });
 };
