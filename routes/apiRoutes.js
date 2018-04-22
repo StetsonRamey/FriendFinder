@@ -23,7 +23,35 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
   app.post('/api/friends', function(req, res) {
-    friendData.push(req.body);
-    res.json(true);
+    // lets use a varible to make things easier
+    var userForm = req.body;
+    // console.log(userForm);
+
+    // we just need scores
+    var scores = userForm.scores;
+
+    console.log('UserScores');
+    console.log(scores);
+
+    // set an empty array to hold the score differences of users
+    var scoreDiff = [];
+    var delta;
+    var totalDiff = [];
+
+    friendData.forEach((element, i) => {
+      scores.forEach((element, j) => {
+        totalDiff.push(Math.abs(parseInt(friendData[i].scores[i]) - parseInt(scores[j])));
+      });
+      
+      console.log("Total Diff");
+      console.log(totalDiff);
+    });
+
+    console.log('Score Diff');
+    console.log(scoreDiff);
+
+    // // push submitted data into our array
+    // friendData.push(userForm);
+    // res.json(true);
   });
 };
