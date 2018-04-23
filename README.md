@@ -11,13 +11,6 @@ Updated the portfolio page with link as well
 [1]: https://stetsonramey.github.io/Responsive-Portfolio/portfolio.html
 [2]: https://github.com/StetsonRamey/bamazon
 
-Screen Grabs
-=================
-#### Customer
-![bamazonCustomer](images/bamazonCustomer.gif)
-
-#### Manager
-![bamazonManager](images/bamazonManager.gif)
 
 Table of Contents
 =================
@@ -31,23 +24,33 @@ Table of Contents
 
   Philosophy
   ==========
-  * frontend - none, this baby is all command line
+  * frontend - all bootstrap
   * backend -
-    * there's a database....
-    * and a couple javascript files....
-    * node modules, `.gitignore`, `package.json`, all the usual suspects
+    * lots of cool files
+    * routing
+    * some javascript
+    * little node
 
 
   Struggles
   =========
-  Really, things went pretty smoothly.  Started with customer, and wrote that in about an hour and a half, and without much difficulty.  
+  Everything came together very nicely, excepth the matching algorithm.  I couldn't get it to come together.
 
-  The manager one took a little longer.  I didn't figure out a clean way to keep running through the logic.  I wrote a little `runAgain()` function and called it, but it doesn't work exactly the way I wanted it too displaying the information and what not.
+  I know I need to do a `for` loop inside a `for` loop.  The first `for` loop loops the `friendData` object in the friends.js file.  The second `for` runs through the scores array inside the `friendData` object.  
+
+  Now I messed with this for sometime, but I couldn't wrap my head around it and get it to work.  
+
+  I think what needs to happen, but didn't have time to mess with it is: 
+
+  1. use a map function, like this: https://stackoverflow.com/questions/24094466/javascript-sum-two-arrays-in-single-iteration
+  2. once I have an array of the differences, sum that array
+  3. then push those sums into their own array
+  4. select the lowest sum from that array as the best match
 
   Ideas for Improvement
   =====================
-  Try and tackle that last piece.  It doens't look too bad, I just ran out of time.
+  Style it up a little.  And figure out the matching algorithm of course
 
   Styling
   =======
-  really like that little `cli-table` node app.  Makes the tables look a lot cleaner.  Shout out to Lance for showing me that one.
+  pretty basic bootstrap right now
