@@ -1,4 +1,4 @@
-# MySQL Homework -  bamazon
+# Express Homework - FriendFinder
 *Create a basic inventory and real simple purchasing app*
 
 Updated the portfolio page with link as well
